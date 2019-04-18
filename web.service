@@ -1,0 +1,14 @@
+[Unit]
+Description=Python HTTP WEB server
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+User=root
+ExecStart=/etc/web/web.py
+
+[Install]
+WantedBy=multi-user.target
